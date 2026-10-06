@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/config.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <script src="js/config.js" defer></script>
+        <title>Home</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="left">
+                <span class="logo">
+                    AI<span class="color">Genius</span>
+                </span>
+            </div>
+            <div class="right">
+                <div class="nav">
+                    <a href="/" class="a">Почетна</a>
+                    <a href="#" class="a">За нас</a>
+                    <% if (loggedIn) { %>
+                        <a href="/profile" class="a">Профилна</a>
+                        <a class="logout a">Одјава</a>
+                    <% } else { %>
+                        <a href="/login" class="a">Најава</a>
+                        <a href="/register" class="a">Регистрација</a>
+                    <% } %>
+                </div>
+            </div>
+        </header>
+        <main class="index">
+            <section class="hero-section">
+                <div class="left">
+                    <h1 class="h1">Претворете ги вашите <span class="color">податоци</span> во разговор</h1>
+                    <p class="p">
+                        Направете персонализиран AI асистент кој учи дирекно од
+                        вашиот PDF и текстуалени фајлови. Прашајте било што и
+                        добијте прецизен одговор веднаш.
+                    </p>
+                    <div class="btns">
+                        <a href="/register" class="a">Започни бесплатно</a>
+                        <a href="#section-2" class="a">Дознај повеќе</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="circle"></div>
+                </div> 
+            </section>
+            <section id="section-2" class="section-2">
+                <h2 class="h2">
+                    Зошто <span class="color">AIGenius?</span>
+                </h2>
+                <div class="cards">
+                    <div class="card">
+                        <img class="icon" src="/img/doc-icon.png" alt="">
+                        <h3 class="h3">Паметно читање</h3>
+                        <p class="p">
+                            Прикачете PDF, Word или текстуални
+                            документи. Нашиот систем ги
+                            индексира информациите со
+                            неверојатна прецизност.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img class="icon" src="/img/speed-icon.png" alt="">
+                        <h3 class="h3">Инстант одговори</h3>
+                        <p class="p">
+                            Нема повеќе чекање. Добијте одговори
+                            базирани исклучиво на вашите податоци
+                            во реално време.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img class="icon" src="/img/lock-icon.png" alt="">
+                        <h3 class="h3">100% Приватност</h3>
+                        <p class="p">
+                            Вашите податоци не се користат за
+                            тренирање на јавни модели. Тие се
+                            само ваши и заштитени со енкрипција.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="content">
+                <div class="left">
+                    <span class="logo">
+                        AI<span class="color">Genius</span>
+                    </span>
+                    <p class="p">
+                    Вашиот личен асистент за паметна
+                    анализа на документи. Иновација која
+                    работи за вас.
+                    </p>
+                    <div class="tags">
+                        <a href="#" class="tag">LinkedIn</a>
+                        <a href="#" class="tag">Twitter</a>
+                        <a href="#" class="tag">GitHub</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="column">
+                        <h2 class="h2">Производ</h2>
+                        <a href="#" class="a">Почетна</a>
+                        <a href="#" class="a">За нас</a>
+                        <a href="#" class="a">Цени</a>
+                    </div>
+                    <div class="column">
+                        <h2 class="h2">Подршка</h2>
+                        <a href="#" class="a">FAQ</a>
+                        <a href="#" class="a">Приватност</a>
+                        <a href="#" class="a">Контакт</a>
+                    </div>
+                </div> 
+            </div>
+            <div class="copyright">
+                <span class="span">@ 2026 AIGenius. Сите права се задржани. Иновацијата е во вештачката интелегенција.</span>
+            </div>
+        </footer> 
+    </body>
+</html>
+

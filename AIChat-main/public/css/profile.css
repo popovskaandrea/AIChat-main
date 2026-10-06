@@ -1,0 +1,536 @@
+.profile {
+    width: 100%;
+    height: calc(100vh - 4rem);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-image: linear-gradient(45deg, #0d0f19, #191a37);
+}
+
+.profile .sidebar {
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    width: fit-content;
+    background-color: rgba(0, 205, 249, 0.02);
+    gap: 2rem;
+    padding: 1rem 2rem 1rem 1rem;
+    border-right: 1px solid #1a2431;
+}
+
+.profile .sidebar .sidebar-header {
+    color: #00cdf9;
+}
+
+.profile .sidebar .options {
+    display: grid;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.profile .sidebar .options .option {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    justify-content: start;
+    text-decoration: none;
+    gap: 0.5rem;
+    color: #82a3b3;
+    cursor: pointer;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 200ms;
+}
+
+.profile .sidebar .options .option:is(:hover, :focus) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.profile .sidebar .options .active {
+    color: #00cdf9;
+}
+
+.profile .sidebar .options .option .span {
+    font-size: 1.2rem;
+}
+
+.profile .panel {
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    gap: 2rem;
+    padding-block: 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: #00cdf9 rgba(255, 255, 255, 0);
+    overflow: auto;
+}
+
+.profile .panel .head {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile .panel .head .btn {
+    color: white;
+    padding: 0.5rem 2rem;
+    background-color: #00cdf9;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 1rem;
+    color: #101220;
+    transition: background-color 200ms;
+}
+
+.profile .panel .head .btn:is(:hover, :focus) {
+    background-color: #6f74cd;
+}
+
+.profile .panel .h2 {
+    color: white; 
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.profile .panel .p {
+    color: #82a3b3;
+    font-size: 1.2rem;
+}
+
+.profile .panel .create-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "left right"
+        "down down";
+    gap: 2rem;
+    width: 70rem;
+}
+
+.profile .panel .create-grid .loading {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    aspect-ratio: 4/3;
+    border: 1px solid #00cdf9;
+    border-radius: 1rem;
+    background-color: #141d32;
+    box-shadow: 0 0 0 50rem rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.profile .panel .create-grid .loading .h2 {
+    font-size: 1.5rem;
+}
+
+.profile .panel .create-grid .loading .loader-spinner {
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-block: 5px solid #00cdf9;
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+}
+
+.profile .panel .create-grid .loading .no-spin {
+    border: none;
+    animation: none;
+    color: green;
+    font-size: 3.5rem;
+    line-height: 1;
+    text-align: center;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+.profile .panel .create-grid .loading .api-key {
+    align-items: center;
+    width: 20rem; 
+    border: 1px solid #00cdf9;
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.4rem;
+    overflow: auto;
+    scrollbar-width: none;
+    color: white;
+}
+
+.profile .panel .create-grid .loading .bot {
+    display: grid;
+    justify-items: center;
+    color: white;
+}
+
+.profile .panel .create-grid .loading .op-05 {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.profile .panel .create-grid .loading .mess {
+    text-align: center;
+    margin-top: 0.5rem;
+    line-height: 1.1rem;
+    font-size: 0.9rem;
+    width: 20rem;
+}
+
+.profile .panel .create-grid .loading .btn {
+    background-color: #00cdf9;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    font-weight: bold; 
+    border: none;
+    justify-self: center;
+    border-radius: 0.5rem; 
+    cursor: pointer;
+    margin-top: 0.8rem;
+    color: #101220;
+    transition: background-color 200ms;
+}
+
+.profile .panel .create-grid .loading .btn:is(:hover, :focus) {
+    background-color: #6f74cd;
+}
+
+.profile .panel .create-grid .loading .disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.profile .panel .create-grid .loading .disabled:is(:hover, :focus) {
+    background-color: #00cdf9;
+}
+
+.profile .panel .create-grid .card {
+    display: grid;
+    gap: 1rem;
+    align-items: start;
+    height: 24rem;
+    background-color: rgba(0, 205, 249, 0.02);
+    border: 1px solid #1a2431;
+    border-radius: 1rem;
+    padding: 2rem;
+} 
+
+.profile .panel .create-grid .card .h3 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: start;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.profile .panel .create-grid .card .h3 .icon {
+    color: #00cdf9;
+}
+
+.profile .panel .create-grid .left {
+    grid-area: left;
+}
+
+.profile .panel .create-grid .insert-url {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.profile .panel .create-grid .left .label {
+    width: 80%;
+    color: white;
+}
+
+.profile .panel .create-grid .left .label .grid-inp {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.3rem;
+    border: 1px solid #00cdf9;
+    width: 100%;
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    padding: 0.3rem;
+}
+
+.profile .panel .create-grid .left .label .input-inp {
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.profile .panel .create-grid .left .label .ignores {
+    display: flex;
+    gap: 0.3rem;
+    max-width: 15rem;
+    width: fit-content;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #00cdf9 rgba(255, 255, 255, 0);
+}
+
+.profile .panel .create-grid .left .label .ignores .ignore {
+    display: grid;
+    align-items: center;
+    background-color: #00cdf9;
+    width: fit-content;
+    border-radius: 0.3rem;
+    height: 100%;
+    padding-inline: 0.5rem;
+    transition: background-color 200ms;
+}
+
+.profile .panel .create-grid .left .label .ignores .ignore:is(:hover, :focus) {
+    background-color: red;
+}
+
+.profile .panel .create-grid .left .input {
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    border: 1px solid #00cdf9;
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    padding: 0.3rem 0.5rem;
+    outline: none;
+}
+
+.profile .panel .create-grid .left .disabled {
+    opacity: 0.3;
+}
+
+.profile .panel .create-grid .left .radio {
+    accent-color: #00cdf9;
+    cursor: pointer;
+}
+
+.profile .panel .create-grid .left .btn {
+    background-color: #00cdf9;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    font-weight: bold; 
+    border: none;
+    border-radius: 0.5rem; 
+    cursor: pointer;
+    margin-top: 0.8rem;
+    color: #101220;
+    transition: background-color 200ms;
+}
+
+.profile .panel .create-grid .left .btn:is(:hover, :focus) {
+    background-color: #6f74cd;
+}
+
+.profile .panel .create-grid .right {
+    grid-area: right;
+}
+
+.profile .panel .create-grid .right .upload {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 1rem;
+    width: 100%; 
+    height: 17rem; 
+    padding-inline: 1rem;
+    text-align: center;
+    background-color: rgba(0, 205, 249, 0.05);
+    border: 2px dashed #00cdf9;
+    border-radius: 0.5rem;
+}
+
+.profile .panel .create-grid .right .upload .icon {
+    color: #00cdf9;
+}
+
+.profile .panel .create-grid .right .upload .h4 {
+    color: #82a3b3;
+    font-size: 1.2rem;
+}
+
+.profile .panel .create-grid .right .upload .u-p {
+    color: #82a3b3;
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+.profile .panel .create-grid .right .upload .label {
+    position: relative;
+    background-color: #00cdf9;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    font-weight: bold; 
+    border-radius: 0.5rem; 
+    cursor: pointer;
+    color: #101220;
+    transition: background-color 200ms;
+}
+
+.profile .panel .create-grid .right .upload .button {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: -1;
+}
+
+.profile .panel .create-grid .right .upload .label:is(:hover, :focus) {
+    background-color: #6f74cd;
+}
+
+.profile .panel .create-grid .down {
+    display: grid;
+    grid-template-rows: 3rem 1fr 3rem;
+    grid-area: down;
+    height: 40rem; 
+}
+
+.profile .panel .create-grid .down .table {
+    display: grid;
+    gap: 1rem;
+}
+
+.profile .panel .create-grid .down .table .row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-inline: 0.6rem;
+    height: 3.5rem;
+    width: 100%;
+    background-color: rgba(0, 205, 249, 0.02);
+    border: 1px solid #00cdf9;
+    border-radius: 0.5rem;
+}
+
+.profile .panel .create-grid .down .table .row .icon {
+    color: #00cdf9;
+}
+
+.profile .panel .create-grid .down .table .row .url {
+    color: #00cdf9;
+    font-weight: bold;
+}
+
+.profile .panel .create-grid .down .table .row .name {
+    color: white;
+}
+
+.profile .panel .create-grid .down .table .row .size {
+    color: white;
+}
+
+.profile .panel .create-grid .down .table .row .ignores {
+    color: white;
+}
+
+.profile .panel .create-grid .down .btn {
+    background-color: #00cdf9;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    color: #101220;
+    justify-self: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.profile .panel .create-grid .down .btn:is(:hover, :focus) {
+    background-color: #6f74cd;
+}
+
+.profile .panel .aichat-grid {
+    display: grid;
+    width: 70rem;
+    gap: 2rem;
+}
+
+.profile .panel .aichat-grid .chats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.profile .panel .aichat-grid .chats .chat {
+    cursor: pointer;
+}
+
+.profile .panel .aichat-grid .chats .chat .h2 {
+    text-align: center;
+}
+
+.profile .panel .aichat-grid .empty {
+    justify-self: center;
+    margin-top: 10rem;
+    font-size: 4rem;
+    width: 50rem;
+    text-align: center;
+    color: white;
+    opacity: 0.2;
+}
+
+.profile .panel .aichat-grid .card {
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    height: 15rem;
+    background-color: rgba(0, 205, 249, 0.02);
+    border: 1px solid #1a2431;
+    border-radius: 1rem;
+    padding-inline: 2rem;
+} 
+
+.profile .panel .aichat-grid .up {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: start;
+    height: 5rem; 
+    font-size: 1.1rem;
+    color: white;
+}
+
+.profile .panel .aichat-grid .up .btn {
+    background-color: #00cdf9;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    color: #101220;
+    border: 1px solid #00cdf9;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.profile .panel .aichat-grid .up .btn:is(:hover, :focus) {
+    background-color: #6f74cd;
+    border-color: #6f74cd;
+}
+
+.profile .panel .aichat-grid .up .btn-ac {
+    background-color: #6f74cd;
+    border-color: #6f74cd;
+}
+
+.profile .panel .aichat-grid .up .input {
+    color: white;
+    margin-left: -2rem;
+    background-color: rgba(255, 255, 255, 0); 
+    border: 1px solid #6f74cd;
+    border-start-end-radius: 1rem; 
+    border-end-end-radius: 1rem; 
+    padding: 0.5rem 1rem 0.5rem 1.5rem;
+    outline: none;
+}

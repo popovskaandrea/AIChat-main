@@ -1,0 +1,54 @@
+.header {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    padding-inline: 20rem;
+    justify-content: space-between;
+    background-image: linear-gradient(90deg, #151720, #20213f); 
+    height: 4rem;
+}
+
+.header .left .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header .left .logo .color {
+    color: #00cdf9;
+}
+
+.header .right .nav {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    gap: 2rem;
+}
+
+.header .right .nav .a {
+    text-decoration: none;
+    color: white; 
+    font-size: 1.2rem; 
+    transition: color 200ms;
+}
+
+.header .right .nav .a:is(:hover, :focus) {
+    color: #6f74cd;
+}
+
+.header .right .nav .a:nth-child(4) {
+    padding: 0.3rem 1rem;
+    background-image: linear-gradient(45deg, #00cdf9, #9a52bc);
+    border-radius: 2rem; 
+    font-weight: bold;
+    transition: box-shadow 200ms;
+}
+
+.header .right .nav .a:nth-child(4):is(:hover, :focus) {
+    color: white;
+    box-shadow: 0 0 5px white;
+}
+
+.header .right .nav .logout {
+    cursor: pointer;
+} 

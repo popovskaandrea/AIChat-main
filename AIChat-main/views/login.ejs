@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/config.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/login-register.css">
+        <script src="js/config.js" defer></script>
+        <script src="js/login.js" defer></script>
+        <title>Login</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="left">
+                <span class="logo">
+                    AI<span class="color">Genius</span>
+                </span>
+            </div>
+            <div class="right">
+                <div class="nav">
+                    <a href="/" class="a">Почетна</a>
+                    <a href="#" class="a">За нас</a>
+                    <a href="/login" class="a">Најава</a>
+                    <a href="/register" class="a">Регистрација</a>
+                </div>
+            </div>
+        </header>
+        <main id="login" class="login-register">
+            <div class="card">
+                <div class="left">
+                    <form class="form">
+                        <h2 class="h2">Најава</h2> 
+                        <div class="input-wrapper">
+                            <input class="input" type="email" placeholder="Е-пошта">
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="input" type="password" placeholder="Лозинка">
+                        </div>
+                        <div class="other">
+                            <label class="label">
+                                <input class="checkbox" type="checkbox" >
+                                Запамти
+                            </label>
+                            <a href="#" class="a">Заборави лозинка?</a>
+                            <span class="msg">Е-пошта или лозинка не е точна!</span>
+                        </div>
+                        <button class="button">Најава</button>
+                        <button class="google">Најависе со Google</button>
+                    </form>
+                    <a href="register" class="reg">Немаш профил?</a>
+                </div>
+                <div class="right">
+                    <div class="chat">
+                        <div class="chat-header">AIChat</div>
+                        <div class="main">
+                            <div class="row">Добредојде назад!</div>
+                            <div class="row">Како да се логирам?</div>
+                            <div class="row">Пополни го формуларот.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

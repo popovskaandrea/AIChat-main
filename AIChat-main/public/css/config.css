@@ -1,0 +1,34 @@
+:root {
+    /* login */
+    --bor-cl: black;
+    --left-bg: #171a20;
+    --right-bg: white;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-grid {
+    display: grid !important;
+}
+
+.op-0 {
+    opacity: 0 !important;
+}
+
+.op-1 {
+    opacity: 1 !important;
+}

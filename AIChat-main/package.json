@@ -1,0 +1,45 @@
+{
+  "name": "aichat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js",
+    "db-setup": "node database/dbSetup.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "@llamaindex/chroma": "^0.0.36",
+    "@llamaindex/ollama": "^0.1.23",
+    "@llamaindex/readers": "^3.1.21",
+    "bcrypt": "^5.1.1",
+    "chroma-js": "^3.2.0",
+    "cors": "^2.8.6",
+    "crypto": "^1.0.1",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "llamaindex": "^0.12.1",
+    "method-override": "^3.0.0",
+    "multer": "^2.1.1",
+    "mysql2": "^3.13.0",
+    "nodemailer": "^7.0.3",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.7",
+    "nodemon": "^3.1.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stefan-megabyte/AIChat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Stefan-megabyte/AIChat/issues"
+  },
+  "homepage": "https://github.com/Stefan-megabyte/AIChat#readme"
+}

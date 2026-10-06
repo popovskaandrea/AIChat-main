@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/config.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/login-register.css">
+        <script src="js/config.js" defer></script>
+        <script src="js/register.js" defer></script>
+        <title>Register</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="left">
+                <span class="logo">
+                    AI<span class="color">Genius</span>
+                </span>
+            </div>
+            <div class="right">
+                <div class="nav">
+                    <a href="/" class="a">Почетна</a>
+                    <a href="#" class="a">За нас</a>
+                    <a href="/login" class="a">Најава</a>
+                    <a href="/register" class="a">Регистрација</a>
+                </div>
+            </div>
+        </header>
+        <main id="register" class="login-register">
+            <div class="card">
+                <div class="left">
+                    <form class="form">
+                        <h2 class="h2">Регистрација</h2> 
+                        <div class="input-wrapper">
+                            <input class="input" type="text" placeholder="Корисничко име">
+                            <span class="required">Ова поле е задолжително!</span>
+                            <span class="error">Ова корисничко име веке постои.</span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="input" type="email" placeholder="Email">
+                            <span class="required">Ова поле е задолжително!</span>
+                            <span class="error">Ова е-пошта веке постои.</span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="input" type="password" placeholder="Password">
+                            <span class="required">Ова поле е задолжително!</span>
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="input" type="password" placeholder="Confirm Password">
+                            <span class="required">Ова поле е задолжително!</span>
+                            <span class="error">Лозинките не се совпагаат.</span>
+                        </div>
+                        <input class="button" type="submit" value="Register">
+                    </form>
+                    <a href="login" class="reg">Already have account?</a>
+                </div>
+                <div class="right">
+                    <div class="chat">
+                        <div class="chat-header">AIChat</div>
+                        <div class="main">
+                            <div class="row">Регистрирај се сега!</div>
+                            <div class="row">Како да се регистритам?</div>
+                            <div class="row">Пополни го формуларот.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
